@@ -14,5 +14,7 @@ namespace Entities
         public List<RegistrationFeild> registrationFeilds { get; set; }
         public List<Address> address { get; set; }
         public FirmType firmtype { get; set; }
+        public string GSTNumber { get; set; }
+        
     }
 }
