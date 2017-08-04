@@ -44,12 +44,13 @@
     <Compile Include="AddressType.cs" />
     <Compile Include="ContactNumber.cs" />
     <Compile Include="FirmDetails.cs" />
-    <Compile Include="Goods.cs" />
+    <Compile Include="FirmType.cs" />
     <Compile Include="Invoice.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemTax.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrationDetails.cs" />
     <Compile Include="RegistrationFeild.cs" />
-    <Compile Include="TaxDetail.cs" />
+    <Compile Include="Tax.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

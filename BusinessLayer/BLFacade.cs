@@ -11,16 +11,18 @@ namespace BusinessLayer
     {
         public bool Purchase(Invoice invoice)
         {
-            AddInvoice(invoice);
+            throw new NotImplementedException();
         }
 
         public FirmDetails RegisterFirm(FirmDetails firmdetails)
         {
             throw new NotImplementedException();
+
         }
 
         public bool Sell(Invoice invoice)
         {
+            
             throw new NotImplementedException();
         }
     }

@@ -15,7 +15,7 @@ namespace AccountsApp
         public Form1()
         {
             InitializeComponent();
-            Blfacade.Addinvoice()
+            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Entities
     {
         public int InvoiceNumber { get; set; }
         public DateTime InvoiceDate { get; set; }
-        public Goods InvoiceGoods { get; set; }
+        public List<Item> InvoiceGoods { get; set; }
         public FirmDetails SellerDetail { get; set; }
         public List<FirmDetails> PurchaserDetails { get; set; }
 
