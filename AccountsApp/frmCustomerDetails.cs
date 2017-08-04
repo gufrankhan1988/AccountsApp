@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,14 @@ namespace AccountsApp
 {
     public partial class frmCustomerDetails : Form
     {
+        private IBLFacade customer;
+
         public frmCustomerDetails()
         {
             InitializeComponent();
-        }
 
+        }
+        
         /// <summary>
         /// Constructor for Customer form
         /// </summary>
@@ -24,7 +29,8 @@ namespace AccountsApp
         public frmCustomerDetails(string strMode)
         {
             InitializeComponent();
-            switch(strMode)
+            customer = new BLFacade();
+            switch (strMode)
             {
                 case "Add":
                     pnlAddCustomerDetails.Visible = true;
@@ -59,6 +65,17 @@ namespace AccountsApp
         {
             //Close this form
             this.Close();
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            FirmDetails firmdetails = new FirmDetails();
+            firmdetails.firmName = txtCustNewName.Text;
+            firmdetails.address = new List<Address>();
+            Address add = new Address();
+            add.addressLine1 = "abc";
+            firmdetails.address.Add(add);
+            customer.SaveFirm(firmdetails);
         }
     }
 }

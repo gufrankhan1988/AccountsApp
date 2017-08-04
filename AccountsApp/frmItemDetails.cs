@@ -47,5 +47,10 @@ namespace AccountsApp
         {
             this.Close();
         }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

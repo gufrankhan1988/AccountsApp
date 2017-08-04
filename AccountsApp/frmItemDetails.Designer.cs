@@ -100,6 +100,7 @@
             this.btnAddItem.TabIndex = 0;
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // txtAddItemCode
             // 
