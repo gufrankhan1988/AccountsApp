@@ -25,5 +25,54 @@ namespace BusinessLayer
             
             throw new NotImplementedException();
         }
+        public Address GetAddressByFirmIDandType(int FirmId, int AddressTypeId)
+        {
+            return new Address();
+        }
+
+        public FirmDetails SaveFirm(FirmDetails firmdetails)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Address> GetAllAddress(int FirmId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<FirmDetails> GetAllFirms()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Invoice> GetAllInvoice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Invoice GetInvoiceByNumber(int InvoiceNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Invoice> GetInvoicesByDateRange(DateTime From, DateTime To)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Invoice> GetInvoiceByFirm(int FirmId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Invoice> GetInvoiceByPurchaserName(string PurchaserName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Invoice UpdateInvoice(Invoice invoice)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
