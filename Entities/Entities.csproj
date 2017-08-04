@@ -50,7 +50,9 @@
     <Compile Include="ItemTax.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationFeild.cs" />
+    <Compile Include="Stock.cs" />
     <Compile Include="Tax.cs" />
+    <Compile Include="UnitType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
