@@ -38,19 +38,47 @@ namespace AccountsApp
             }
         }
 
+        private bool ValidateFields()
+        {
+            if (txtAddItemName.Text == String.Empty)
+            {
+                MessageBox.Show("Please enter Item Name", "No Item Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (txtAddItemCode.Text == String.Empty)
+            {
+                MessageBox.Show("Please enter Item Code", "Item Code Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+                return true;
+        }
+
         private void btnAddItemClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnEditItemClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (ValidateFields())
+                {
+                    //Call Save method.
+                    MessageBox.Show("OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error in Item Save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { }
         }
     }
 }

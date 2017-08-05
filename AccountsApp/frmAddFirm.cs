@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -164,6 +165,17 @@ namespace AccountsApp
                 return false;
         }
 
+        private void CreateFirmObject()
+        {
+            FirmDetails firmdetails = new FirmDetails();
+            firmdetails.firmName = txtFirmName.Text;
+            firmdetails.address = new List<Address>();
+            Address add = new Address();
+            add.addressLine1 = "abc";
+            firmdetails.address.Add(add);
+            objFirmDetails.SaveFirm(firmdetails);
+        }
+
         private void chkOfficeAddress_CheckedChanged(object sender, EventArgs e)
         {
             if (chkOfficeAddress.Checked)
@@ -195,8 +207,11 @@ namespace AccountsApp
                 if (ValidateFirmDetailFields())
                 {
                     if (ValidateFirmAddressFields())
+                    {
+                        CreateFirmObject();
                         //Call Save method.
                         MessageBox.Show("OK");
+                    }
                 }
             }
             catch (Exception ex)
