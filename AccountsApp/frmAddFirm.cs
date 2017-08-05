@@ -57,9 +57,9 @@ namespace AccountsApp
             txtShippingCity.Text = String.Empty;
             txtShippingZipCode.Text = String.Empty;
 
-            chkOfficeAddress.Checked = false;
-            chkOtherAddress.Checked = false;
-            chkShippingAddress.Checked = false;
+            chkOfficeAddress.Checked = true;
+            chkOtherAddress.Checked = true;
+            chkShippingAddress.Checked = true;
         }
 
         private bool ValidateFirmDetailFields()

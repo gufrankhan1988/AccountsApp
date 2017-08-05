@@ -316,11 +316,12 @@
             this.pnlOfficeAddress.Name = "pnlOfficeAddress";
             this.pnlOfficeAddress.Size = new System.Drawing.Size(403, 269);
             this.pnlOfficeAddress.TabIndex = 25;
-            this.pnlOfficeAddress.Visible = false;
             // 
             // chkOfficeAddress
             // 
             this.chkOfficeAddress.AutoSize = true;
+            this.chkOfficeAddress.Checked = true;
+            this.chkOfficeAddress.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkOfficeAddress.Location = new System.Drawing.Point(12, 153);
             this.chkOfficeAddress.Name = "chkOfficeAddress";
             this.chkOfficeAddress.Size = new System.Drawing.Size(140, 24);
@@ -332,6 +333,8 @@
             // chkShippingAddress
             // 
             this.chkShippingAddress.AutoSize = true;
+            this.chkShippingAddress.Checked = true;
+            this.chkShippingAddress.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkShippingAddress.Location = new System.Drawing.Point(429, 153);
             this.chkShippingAddress.Name = "chkShippingAddress";
             this.chkShippingAddress.Size = new System.Drawing.Size(160, 24);
@@ -343,6 +346,8 @@
             // chkOtherAddress
             // 
             this.chkOtherAddress.AutoSize = true;
+            this.chkOtherAddress.Checked = true;
+            this.chkOtherAddress.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkOtherAddress.Location = new System.Drawing.Point(846, 153);
             this.chkOtherAddress.Name = "chkOtherAddress";
             this.chkOtherAddress.Size = new System.Drawing.Size(138, 24);
@@ -370,7 +375,6 @@
             this.pnlShippingAddress.Name = "pnlShippingAddress";
             this.pnlShippingAddress.Size = new System.Drawing.Size(403, 269);
             this.pnlShippingAddress.TabIndex = 28;
-            this.pnlShippingAddress.Visible = false;
             // 
             // txtShippingCountry
             // 
@@ -490,7 +494,6 @@
             this.pnlOtherAddress.Name = "pnlOtherAddress";
             this.pnlOtherAddress.Size = new System.Drawing.Size(403, 269);
             this.pnlOtherAddress.TabIndex = 28;
-            this.pnlOtherAddress.Visible = false;
             // 
             // txtOtherCountry
             // 
