@@ -93,21 +93,21 @@
             this.addAddressToolStripMenuItem,
             this.itemToolStripMenuItem});
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
-            this.createToolStripMenuItem.Text = "Customer";
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(59, 29);
+            this.createToolStripMenuItem.Text = "Firm";
             // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
-            this.customerToolStripMenuItem.Text = "New Customer";
+            this.customerToolStripMenuItem.Text = "New Firm";
             this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // addAddressToolStripMenuItem
             // 
             this.addAddressToolStripMenuItem.Name = "addAddressToolStripMenuItem";
             this.addAddressToolStripMenuItem.Size = new System.Drawing.Size(265, 30);
-            this.addAddressToolStripMenuItem.Text = "Update Customer";
+            this.addAddressToolStripMenuItem.Text = "Update Firm";
             this.addAddressToolStripMenuItem.Click += new System.EventHandler(this.addAddressToolStripMenuItem_Click);
             // 
             // itemToolStripMenuItem

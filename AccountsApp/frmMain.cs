@@ -39,14 +39,23 @@ namespace AccountsApp
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Call frmFound and check if customer form is already open, if not then open
-            if (!frmFound("frmAddCustomer"))
+            //Call frmFound and check if Firm form is already open, if not then open
+            if (!frmFound("frmAddFirm"))
             {
-                frmCustomerDetails objAddCustomer = new frmCustomerDetails("Add");
+                frmAddFirm objAddCustomer = new frmAddFirm("Add");
                 objAddCustomer.MdiParent = frmMain.ActiveForm;
                 objAddCustomer.WindowState = FormWindowState.Maximized;
                 objAddCustomer.Show();
             }
+
+            ////Call frmFound and check if customer form is already open, if not then open
+            //if (!frmFound("frmAddCustomer"))
+            //{
+            //    frmCustomerDetails objAddCustomer = new frmCustomerDetails("Add");
+            //    objAddCustomer.MdiParent = frmMain.ActiveForm;
+            //    objAddCustomer.WindowState = FormWindowState.Maximized;
+            //    objAddCustomer.Show();
+            //}
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
