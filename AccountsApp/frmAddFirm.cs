@@ -90,12 +90,9 @@ namespace AccountsApp
                 return true;
         }
 
-        private bool ValidateFirmAddressFields()
+        private bool ValidateFirmShippingAddressFields()
         {
             bool blnShipping = false;
-            bool blnOffice = false;
-            bool blnOther = false;
-
             if (chkShippingAddress.Checked)
             {
                 if (txtShippingAddressLine1.Text == String.Empty)
@@ -116,6 +113,15 @@ namespace AccountsApp
                 else
                     blnShipping = true;
             }
+            else
+                blnShipping = true;
+
+            return blnShipping;
+        }
+
+        private bool ValidateFirmOfficeAddressFields()
+        {
+            bool blnOffice = false;
 
             if (chkOfficeAddress.Checked)
             {
@@ -137,6 +143,15 @@ namespace AccountsApp
                 else
                     blnOffice = true;
             }
+            else
+                blnOffice = true;
+
+            return blnOffice;
+        }
+
+        private bool ValidateFirmOtherAddressFields()
+        {
+            bool blnOther = false;
 
             if (chkOtherAddress.Checked)
             {
@@ -158,22 +173,107 @@ namespace AccountsApp
                 else
                     blnOther = true;
             }
-
-            if (blnShipping && blnOther && blnOffice)
-                return true;
             else
-                return false;
+                blnOther = true;
+
+            return blnOther;
         }
 
         private void CreateFirmObject()
         {
             FirmDetails firmdetails = new FirmDetails();
-            firmdetails.firmName = txtFirmName.Text;
-            firmdetails.address = new List<Address>();
-            Address add = new Address();
-            add.addressLine1 = "abc";
-            firmdetails.address.Add(add);
+            ContactNumber cntNoFirm = new ContactNumber();
+            FirmType fType = new FirmType();
+
+            cntNoFirm.contactNumber = txtFirmMobile.Text.Trim();
+            firmdetails.firmName = txtFirmName.Text.Trim();
+            firmdetails.contactNumber = cntNoFirm;
+
+            fType.FirmCategory = "Testing";
+            firmdetails.firmtype = fType;
+
+            firmdetails.GSTNumber = txtFirmGSTNo.Text.Trim();
+
+            firmdetails.address = CreateAddresses();
+            //where are use of registratin details.
+
+            //Address add = CreateAddresses();
+            //add.addressLine1 = txtof
+            //firmdetails.address.Add(add);
             objFirmDetails.SaveFirm(firmdetails);
+        }
+
+        private List<Address> CreateAddresses()
+        {
+            List<Address> firmAddresses = new List<Address>();
+
+            if (chkOfficeAddress.Checked)
+            {
+                Address addrOffice = new Address();
+                ContactNumber addrcontNumber = new ContactNumber();
+                AddressType addType = new AddressType();
+
+                //add address details
+                addrOffice.addressLine1 = txtOfficeAddressLine1.Text.Trim();
+                addrOffice.addressLine2 = txtOfficeAddressLine2.Text.Trim();
+                addType.addressType = "Office";
+                addrOffice.addressType = addType;
+                addrOffice.city = txtOfficeCity.Text.Trim();
+                addrOffice.country = txtOfficeCountry.Text.Trim();
+
+                //add contact details
+                addrcontNumber.contactNumber = txtOfficeContactNo.Text.Trim();
+                addrOffice.adressContactNumber.Add(addrcontNumber);
+
+                //add to address return list
+                firmAddresses.Add(addrOffice);
+            }
+
+            if (chkOtherAddress.Checked)
+            {
+                Address addrOther = new Address();
+                ContactNumber addrcontNumber = new ContactNumber();
+                AddressType addType = new AddressType();
+
+                //add address details
+                addrOther.addressLine1 = txtOtherAddressLine1.Text.Trim();
+                addrOther.addressLine2 = txtOtherAddressLine2.Text.Trim();
+                addType.addressType = "Other";
+                addrOther.addressType = addType;
+                addrOther.city = txtOtherCity.Text.Trim();
+                addrOther.country = txtOtherCountry.Text.Trim();
+
+                //add contact details
+                addrcontNumber.contactNumber = txtOtherContactNo.Text.Trim();
+                addrOther.adressContactNumber.Add(addrcontNumber);
+
+                //add to address return list
+                firmAddresses.Add(addrOther);
+            }
+
+            if (chkShippingAddress.Checked)
+            {
+                Address addrShipping = new Address();
+                ContactNumber addrcontNumber = new ContactNumber();
+                AddressType addType = new AddressType();
+
+                //add address details
+                addrShipping.addressLine1 = txtShippingAddressLine1.Text.Trim();
+                addrShipping.addressLine2 = txtShippingAddressLine2.Text.Trim();
+                addType.addressType = "Shipping";
+                addrShipping.addressType = addType;
+                addrShipping.city = txtShippingCity.Text.Trim();
+                addrShipping.country = txtShippingCountry.Text.Trim();
+
+                //add contact details
+                addrcontNumber.contactNumber = txtShippingContactNo.Text.Trim();
+                addrShipping.adressContactNumber.Add(addrcontNumber);
+
+                //add to address return list
+                firmAddresses.Add(addrShipping);
+            }
+
+            return firmAddresses;
         }
 
         private void chkOfficeAddress_CheckedChanged(object sender, EventArgs e)
@@ -206,13 +306,15 @@ namespace AccountsApp
             {
                 if (ValidateFirmDetailFields())
                 {
-                    if (ValidateFirmAddressFields())
+                    if (ValidateFirmOfficeAddressFields() && ValidateFirmShippingAddressFields() && ValidateFirmOtherAddressFields())
                     {
                         CreateFirmObject();
                         //Call Save method.
-                        MessageBox.Show("OK");
+                        MessageBox.Show("Firm added successfully.", "Add Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                // here might be message for firm details errors. 
+                // here might be message for address details errors.
             }
             catch (Exception ex)
             {

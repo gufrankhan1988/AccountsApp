@@ -82,6 +82,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblOfficeContactNo = new System.Windows.Forms.Label();
+            this.txtOfficeContactNo = new System.Windows.Forms.TextBox();
+            this.txtShippingContactNo = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtOtherContactNo = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnlAddFirmDetails.SuspendLayout();
             this.pnlOfficeAddress.SuspendLayout();
             this.pnlShippingAddress.SuspendLayout();
@@ -171,7 +177,7 @@
             // txtOfficeCountry
             // 
             this.txtOfficeCountry.Enabled = false;
-            this.txtOfficeCountry.Location = new System.Drawing.Point(139, 224);
+            this.txtOfficeCountry.Location = new System.Drawing.Point(139, 214);
             this.txtOfficeCountry.Name = "txtOfficeCountry";
             this.txtOfficeCountry.Size = new System.Drawing.Size(133, 26);
             this.txtOfficeCountry.TabIndex = 27;
@@ -180,7 +186,7 @@
             // cboOfficeState
             // 
             this.cboOfficeState.FormattingEnabled = true;
-            this.cboOfficeState.Location = new System.Drawing.Point(139, 180);
+            this.cboOfficeState.Location = new System.Drawing.Point(139, 172);
             this.cboOfficeState.Name = "cboOfficeState";
             this.cboOfficeState.Size = new System.Drawing.Size(252, 28);
             this.cboOfficeState.TabIndex = 26;
@@ -224,21 +230,21 @@
             // 
             // txtOfficeAddressLine2
             // 
-            this.txtOfficeAddressLine2.Location = new System.Drawing.Point(139, 54);
+            this.txtOfficeAddressLine2.Location = new System.Drawing.Point(139, 52);
             this.txtOfficeAddressLine2.Name = "txtOfficeAddressLine2";
             this.txtOfficeAddressLine2.Size = new System.Drawing.Size(252, 26);
             this.txtOfficeAddressLine2.TabIndex = 21;
             // 
             // txtOfficeCity
             // 
-            this.txtOfficeCity.Location = new System.Drawing.Point(139, 96);
+            this.txtOfficeCity.Location = new System.Drawing.Point(139, 92);
             this.txtOfficeCity.Name = "txtOfficeCity";
             this.txtOfficeCity.Size = new System.Drawing.Size(133, 26);
             this.txtOfficeCity.TabIndex = 20;
             // 
             // txtOfficeZipCode
             // 
-            this.txtOfficeZipCode.Location = new System.Drawing.Point(139, 138);
+            this.txtOfficeZipCode.Location = new System.Drawing.Point(139, 132);
             this.txtOfficeZipCode.Name = "txtOfficeZipCode";
             this.txtOfficeZipCode.Size = new System.Drawing.Size(133, 26);
             this.txtOfficeZipCode.TabIndex = 17;
@@ -246,7 +252,7 @@
             // lblOfficeCountry
             // 
             this.lblOfficeCountry.AutoSize = true;
-            this.lblOfficeCountry.Location = new System.Drawing.Point(12, 225);
+            this.lblOfficeCountry.Location = new System.Drawing.Point(16, 215);
             this.lblOfficeCountry.Name = "lblOfficeCountry";
             this.lblOfficeCountry.Size = new System.Drawing.Size(64, 20);
             this.lblOfficeCountry.TabIndex = 12;
@@ -255,7 +261,7 @@
             // lblOfficeState
             // 
             this.lblOfficeState.AutoSize = true;
-            this.lblOfficeState.Location = new System.Drawing.Point(12, 183);
+            this.lblOfficeState.Location = new System.Drawing.Point(16, 175);
             this.lblOfficeState.Name = "lblOfficeState";
             this.lblOfficeState.Size = new System.Drawing.Size(48, 20);
             this.lblOfficeState.TabIndex = 10;
@@ -264,7 +270,7 @@
             // lblOfficeZipCode
             // 
             this.lblOfficeZipCode.AutoSize = true;
-            this.lblOfficeZipCode.Location = new System.Drawing.Point(12, 141);
+            this.lblOfficeZipCode.Location = new System.Drawing.Point(16, 135);
             this.lblOfficeZipCode.Name = "lblOfficeZipCode";
             this.lblOfficeZipCode.Size = new System.Drawing.Size(73, 20);
             this.lblOfficeZipCode.TabIndex = 9;
@@ -273,7 +279,7 @@
             // lblOfficeCity
             // 
             this.lblOfficeCity.AutoSize = true;
-            this.lblOfficeCity.Location = new System.Drawing.Point(12, 99);
+            this.lblOfficeCity.Location = new System.Drawing.Point(16, 95);
             this.lblOfficeCity.Name = "lblOfficeCity";
             this.lblOfficeCity.Size = new System.Drawing.Size(35, 20);
             this.lblOfficeCity.TabIndex = 8;
@@ -282,7 +288,7 @@
             // lblOfficeAddressLine2
             // 
             this.lblOfficeAddressLine2.AutoSize = true;
-            this.lblOfficeAddressLine2.Location = new System.Drawing.Point(12, 57);
+            this.lblOfficeAddressLine2.Location = new System.Drawing.Point(16, 55);
             this.lblOfficeAddressLine2.Name = "lblOfficeAddressLine2";
             this.lblOfficeAddressLine2.Size = new System.Drawing.Size(115, 20);
             this.lblOfficeAddressLine2.TabIndex = 7;
@@ -291,7 +297,7 @@
             // lblOfficeAddressLine1
             // 
             this.lblOfficeAddressLine1.AutoSize = true;
-            this.lblOfficeAddressLine1.Location = new System.Drawing.Point(12, 15);
+            this.lblOfficeAddressLine1.Location = new System.Drawing.Point(16, 15);
             this.lblOfficeAddressLine1.Name = "lblOfficeAddressLine1";
             this.lblOfficeAddressLine1.Size = new System.Drawing.Size(115, 20);
             this.lblOfficeAddressLine1.TabIndex = 6;
@@ -300,6 +306,8 @@
             // pnlOfficeAddress
             // 
             this.pnlOfficeAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOfficeAddress.Controls.Add(this.txtOfficeContactNo);
+            this.pnlOfficeAddress.Controls.Add(this.lblOfficeContactNo);
             this.pnlOfficeAddress.Controls.Add(this.txtOfficeCountry);
             this.pnlOfficeAddress.Controls.Add(this.txtOfficeAddressLine2);
             this.pnlOfficeAddress.Controls.Add(this.cboOfficeState);
@@ -314,7 +322,7 @@
             this.pnlOfficeAddress.Controls.Add(this.lblOfficeState);
             this.pnlOfficeAddress.Location = new System.Drawing.Point(12, 188);
             this.pnlOfficeAddress.Name = "pnlOfficeAddress";
-            this.pnlOfficeAddress.Size = new System.Drawing.Size(403, 269);
+            this.pnlOfficeAddress.Size = new System.Drawing.Size(403, 303);
             this.pnlOfficeAddress.TabIndex = 25;
             // 
             // chkOfficeAddress
@@ -359,6 +367,8 @@
             // pnlShippingAddress
             // 
             this.pnlShippingAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlShippingAddress.Controls.Add(this.txtShippingContactNo);
+            this.pnlShippingAddress.Controls.Add(this.label13);
             this.pnlShippingAddress.Controls.Add(this.txtShippingCountry);
             this.pnlShippingAddress.Controls.Add(this.txtShippingAddressLine2);
             this.pnlShippingAddress.Controls.Add(this.cboShippingState);
@@ -373,13 +383,13 @@
             this.pnlShippingAddress.Controls.Add(this.label6);
             this.pnlShippingAddress.Location = new System.Drawing.Point(429, 188);
             this.pnlShippingAddress.Name = "pnlShippingAddress";
-            this.pnlShippingAddress.Size = new System.Drawing.Size(403, 269);
+            this.pnlShippingAddress.Size = new System.Drawing.Size(403, 303);
             this.pnlShippingAddress.TabIndex = 28;
             // 
             // txtShippingCountry
             // 
             this.txtShippingCountry.Enabled = false;
-            this.txtShippingCountry.Location = new System.Drawing.Point(139, 224);
+            this.txtShippingCountry.Location = new System.Drawing.Point(138, 209);
             this.txtShippingCountry.Name = "txtShippingCountry";
             this.txtShippingCountry.Size = new System.Drawing.Size(133, 26);
             this.txtShippingCountry.TabIndex = 27;
@@ -387,7 +397,7 @@
             // 
             // txtShippingAddressLine2
             // 
-            this.txtShippingAddressLine2.Location = new System.Drawing.Point(139, 54);
+            this.txtShippingAddressLine2.Location = new System.Drawing.Point(138, 51);
             this.txtShippingAddressLine2.Name = "txtShippingAddressLine2";
             this.txtShippingAddressLine2.Size = new System.Drawing.Size(252, 26);
             this.txtShippingAddressLine2.TabIndex = 21;
@@ -395,7 +405,7 @@
             // cboShippingState
             // 
             this.cboShippingState.FormattingEnabled = true;
-            this.cboShippingState.Location = new System.Drawing.Point(139, 180);
+            this.cboShippingState.Location = new System.Drawing.Point(138, 168);
             this.cboShippingState.Name = "cboShippingState";
             this.cboShippingState.Size = new System.Drawing.Size(252, 28);
             this.cboShippingState.TabIndex = 26;
@@ -403,7 +413,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 20);
             this.label1.TabIndex = 6;
@@ -412,7 +422,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(15, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 20);
             this.label2.TabIndex = 7;
@@ -420,14 +430,14 @@
             // 
             // txtShippingZipCode
             // 
-            this.txtShippingZipCode.Location = new System.Drawing.Point(139, 138);
+            this.txtShippingZipCode.Location = new System.Drawing.Point(138, 129);
             this.txtShippingZipCode.Name = "txtShippingZipCode";
             this.txtShippingZipCode.Size = new System.Drawing.Size(133, 26);
             this.txtShippingZipCode.TabIndex = 17;
             // 
             // txtShippingAddressLine1
             // 
-            this.txtShippingAddressLine1.Location = new System.Drawing.Point(139, 12);
+            this.txtShippingAddressLine1.Location = new System.Drawing.Point(138, 12);
             this.txtShippingAddressLine1.Name = "txtShippingAddressLine1";
             this.txtShippingAddressLine1.Size = new System.Drawing.Size(252, 26);
             this.txtShippingAddressLine1.TabIndex = 22;
@@ -435,7 +445,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 99);
+            this.label3.Location = new System.Drawing.Point(15, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 20);
             this.label3.TabIndex = 8;
@@ -443,7 +453,7 @@
             // 
             // txtShippingCity
             // 
-            this.txtShippingCity.Location = new System.Drawing.Point(139, 96);
+            this.txtShippingCity.Location = new System.Drawing.Point(138, 90);
             this.txtShippingCity.Name = "txtShippingCity";
             this.txtShippingCity.Size = new System.Drawing.Size(133, 26);
             this.txtShippingCity.TabIndex = 20;
@@ -451,7 +461,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 141);
+            this.label4.Location = new System.Drawing.Point(15, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 9;
@@ -460,7 +470,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 225);
+            this.label5.Location = new System.Drawing.Point(15, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 12;
@@ -469,7 +479,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 183);
+            this.label6.Location = new System.Drawing.Point(15, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 10;
@@ -478,6 +488,8 @@
             // pnlOtherAddress
             // 
             this.pnlOtherAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOtherAddress.Controls.Add(this.txtOtherContactNo);
+            this.pnlOtherAddress.Controls.Add(this.label14);
             this.pnlOtherAddress.Controls.Add(this.txtOtherCountry);
             this.pnlOtherAddress.Controls.Add(this.txtOtherAddressLine2);
             this.pnlOtherAddress.Controls.Add(this.cboOtherState);
@@ -492,13 +504,13 @@
             this.pnlOtherAddress.Controls.Add(this.label12);
             this.pnlOtherAddress.Location = new System.Drawing.Point(846, 189);
             this.pnlOtherAddress.Name = "pnlOtherAddress";
-            this.pnlOtherAddress.Size = new System.Drawing.Size(403, 269);
+            this.pnlOtherAddress.Size = new System.Drawing.Size(403, 302);
             this.pnlOtherAddress.TabIndex = 28;
             // 
             // txtOtherCountry
             // 
             this.txtOtherCountry.Enabled = false;
-            this.txtOtherCountry.Location = new System.Drawing.Point(139, 224);
+            this.txtOtherCountry.Location = new System.Drawing.Point(139, 209);
             this.txtOtherCountry.Name = "txtOtherCountry";
             this.txtOtherCountry.Size = new System.Drawing.Size(133, 26);
             this.txtOtherCountry.TabIndex = 27;
@@ -506,7 +518,7 @@
             // 
             // txtOtherAddressLine2
             // 
-            this.txtOtherAddressLine2.Location = new System.Drawing.Point(139, 54);
+            this.txtOtherAddressLine2.Location = new System.Drawing.Point(139, 51);
             this.txtOtherAddressLine2.Name = "txtOtherAddressLine2";
             this.txtOtherAddressLine2.Size = new System.Drawing.Size(252, 26);
             this.txtOtherAddressLine2.TabIndex = 21;
@@ -514,7 +526,7 @@
             // cboOtherState
             // 
             this.cboOtherState.FormattingEnabled = true;
-            this.cboOtherState.Location = new System.Drawing.Point(139, 180);
+            this.cboOtherState.Location = new System.Drawing.Point(139, 168);
             this.cboOtherState.Name = "cboOtherState";
             this.cboOtherState.Size = new System.Drawing.Size(252, 28);
             this.cboOtherState.TabIndex = 26;
@@ -522,7 +534,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 15);
+            this.label7.Location = new System.Drawing.Point(16, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 20);
             this.label7.TabIndex = 6;
@@ -531,7 +543,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 57);
+            this.label8.Location = new System.Drawing.Point(16, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 20);
             this.label8.TabIndex = 7;
@@ -539,7 +551,7 @@
             // 
             // txtOtherZipCode
             // 
-            this.txtOtherZipCode.Location = new System.Drawing.Point(139, 138);
+            this.txtOtherZipCode.Location = new System.Drawing.Point(139, 129);
             this.txtOtherZipCode.Name = "txtOtherZipCode";
             this.txtOtherZipCode.Size = new System.Drawing.Size(133, 26);
             this.txtOtherZipCode.TabIndex = 17;
@@ -554,7 +566,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 99);
+            this.label9.Location = new System.Drawing.Point(16, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 20);
             this.label9.TabIndex = 8;
@@ -562,7 +574,7 @@
             // 
             // txtOtherCity
             // 
-            this.txtOtherCity.Location = new System.Drawing.Point(139, 96);
+            this.txtOtherCity.Location = new System.Drawing.Point(139, 90);
             this.txtOtherCity.Name = "txtOtherCity";
             this.txtOtherCity.Size = new System.Drawing.Size(133, 26);
             this.txtOtherCity.TabIndex = 20;
@@ -570,7 +582,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 141);
+            this.label10.Location = new System.Drawing.Point(16, 135);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 20);
             this.label10.TabIndex = 9;
@@ -579,7 +591,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 225);
+            this.label11.Location = new System.Drawing.Point(16, 215);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 20);
             this.label11.TabIndex = 12;
@@ -588,17 +600,65 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 183);
+            this.label12.Location = new System.Drawing.Point(16, 175);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 20);
             this.label12.TabIndex = 10;
             this.label12.Text = "State";
             // 
+            // lblOfficeContactNo
+            // 
+            this.lblOfficeContactNo.AutoSize = true;
+            this.lblOfficeContactNo.Location = new System.Drawing.Point(16, 255);
+            this.lblOfficeContactNo.Name = "lblOfficeContactNo";
+            this.lblOfficeContactNo.Size = new System.Drawing.Size(93, 20);
+            this.lblOfficeContactNo.TabIndex = 28;
+            this.lblOfficeContactNo.Text = "Contact No.";
+            // 
+            // txtOfficeContactNo
+            // 
+            this.txtOfficeContactNo.Location = new System.Drawing.Point(139, 254);
+            this.txtOfficeContactNo.Name = "txtOfficeContactNo";
+            this.txtOfficeContactNo.Size = new System.Drawing.Size(212, 26);
+            this.txtOfficeContactNo.TabIndex = 29;
+            // 
+            // txtShippingContactNo
+            // 
+            this.txtShippingContactNo.Location = new System.Drawing.Point(138, 248);
+            this.txtShippingContactNo.Name = "txtShippingContactNo";
+            this.txtShippingContactNo.Size = new System.Drawing.Size(212, 26);
+            this.txtShippingContactNo.TabIndex = 31;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 255);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(93, 20);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Contact No.";
+            // 
+            // txtOtherContactNo
+            // 
+            this.txtOtherContactNo.Location = new System.Drawing.Point(139, 248);
+            this.txtOtherContactNo.Name = "txtOtherContactNo";
+            this.txtOtherContactNo.Size = new System.Drawing.Size(212, 26);
+            this.txtOtherContactNo.TabIndex = 31;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 255);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(93, 20);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Contact No.";
+            // 
             // frmAddFirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 502);
+            this.ClientSize = new System.Drawing.Size(1284, 526);
             this.Controls.Add(this.btnAddClose);
             this.Controls.Add(this.pnlOtherAddress);
             this.Controls.Add(this.btnClearFields);
@@ -680,5 +740,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtOfficeContactNo;
+        private System.Windows.Forms.Label lblOfficeContactNo;
+        private System.Windows.Forms.TextBox txtShippingContactNo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtOtherContactNo;
+        private System.Windows.Forms.Label label14;
     }
 }
